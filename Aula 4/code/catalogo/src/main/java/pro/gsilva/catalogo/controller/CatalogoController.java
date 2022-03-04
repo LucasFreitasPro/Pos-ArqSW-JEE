@@ -79,6 +79,7 @@ public class CatalogoController {
 		if (result.hasErrors()) {
 			ModelAndView musicaForm = new ModelAndView("musicaForm");
 			musicaForm.addObject("mensagem", "Verifique os errors do formulário");
+			musicaForm.addObject("categorias", categorias);
 			return musicaForm;
 		}
 		musica.setData(LocalDate.now());
